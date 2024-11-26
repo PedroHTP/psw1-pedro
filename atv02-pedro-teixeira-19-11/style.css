@@ -291,6 +291,10 @@ footer p {
     width: 10%;
 }
 
+footer img {
+    width: 50%;
+}
+
 @media screen and (min-width: 2560px){
  
     * {
