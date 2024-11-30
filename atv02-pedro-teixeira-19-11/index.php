@@ -18,7 +18,7 @@
             <h1 id="titulo-form">Atividade de Formulário</h1>
         </div>
         <div id="imagem-direita">
-            <div><img src="imagens/PSW.png" alt=""></div>
+            <div><img src="./imagens/PSW.png" alt=""></div>
         </div>
     </header>
     <div id="reajuste">
