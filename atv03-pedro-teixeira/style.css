@@ -23,7 +23,7 @@ header {
 }
 
 nav {
-    width: 55%;
+    width: 65%;
     justify-items: center;
 }
 
@@ -56,31 +56,54 @@ nav ul {
 }
 
 #perfil {
-    width: 15%;
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: right;
-    gap: 3%;
+    margin-left: 1%;
     #foto {
-        padding: 1%;
+        padding: 5%;
     }
-}
-
-#usuario { 
-    text-wrap: nowrap;
+    #usuario { 
+        text-wrap: nowrap;
+        button {
+            background-color: #1D1F26;
+            padding: 6px;
+            border-radius: 5px;
+            border-color: #BF9C34;
+            a {
+                text-decoration: none;
+                color: #BF9C34;
+                font-size: 100%;
+            }
+        }
+        button:hover {
+            transition: 1s;
+            transform: scale(1.05);
+            background-color: #000000;
+        }
+    }
 }
 
 #search {
     display: flex;
     justify-content: right;
     width: 10%;
-    padding: 1%;
+    margin-right: 1%;
+    img {
+        margin: 10%;
+    }
 }
 #search input {
     border-radius: 3px;
 }
 
 main {
+    display: block;
+    width: 100%;
+}
+
+#sobre-portifolio {
     display: flex;
     width: 100%;
 }
@@ -94,16 +117,19 @@ section {
         margin: 0;
         padding: 2%;
         font-size: 2em;
+        text-align: left;
     }
     
     h2 {
         font-size: 1.6rem;
         color: #a8892e;
+        text-align: left;
     }
 
     h3 {
         text-decoration: underline;
         color: #a8892e;
+        text-align: left;
     }
     .texto {
         width: 95%;
@@ -120,36 +146,78 @@ section {
 }
 
 main {
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #sobre {
     background-color: #0E0D26;
     width: fit-content;
+    margin: 1% 5%;
+    margin-right: 0%;
 }
 
 #portifolio {
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 40%;
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;
     height: 100%;
+    margin: 2%;
+    margin-right: 5.8%;
     .img {
-        width: fit-content;
-        border-radius: 10px;
+        width: 100%;
+        border-radius: 4%;
         padding: 3%;
         background-color: #0d0d0d;
+        box-shadow: 8px 8px 20px 0px #433a81;
+        img {
+            width: 100%;
+        }
     }
 }
 
+#img-texto {
+    width: 87%;
+    background-color: #0E0D26;
+    padding: 1.5%;
+    padding-right: 1.5%;
+    display: flex;
+    .img-lado {
+        width: 60%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    #texto-descritivo {
+        width: 40%;
+    }
+}
+
+#texto-descritivo {
+        text-align: justify;
+        padding-left: 3%;
+        font-size: 1.2em;
+        color: rgb(184, 184, 184);
+        h2 {
+            margin-top: 0;
+        }
+}
+
 #form {
-    width: 50%;
+    width: 60%;
     margin: 1%;
     padding: 2%;
     background-color: #0E0D26;
     color: aliceblue;
+    h1 {
+        padding: 0;
+    }
+    h3 {
+        font-size: 1.4em;
+    }
 }
 #formulario-reajuste {
     display: flex;
@@ -178,7 +246,7 @@ label {
 
 
 input {
-    width: 90%;
+    width: 80%;
     padding: 1%;
     margin-top: 1%;
     border-color: #BF9C34;
@@ -208,12 +276,12 @@ select {
     }
 }
 
-#botoes form {
+#botoes {
     display: flex;
     input {
         width: fit-content;
         font-size: 1.3em;
-        padding: 1.3%;
+        padding: 2%;
         border-radius: 3px;
         color: aliceblue;
     }
@@ -229,11 +297,13 @@ select {
         width: 50%;
         input {
             background-color: rgba(0, 193, 3, 0.749);
+            border-color: #bea96c;
         }
         input:hover {
-            background-color: rgba(0, 112, 2, 0.749);
+            background-color: rgba(0, 160, 3, 0.749);
         }
     }
+
     #botao-direita {
         display: flex;
         justify-content: left;
@@ -241,9 +311,10 @@ select {
         width: 50%;
         input {
             background-color: rgba(188, 0, 0, 0.749);
+            border-color: #bea96c;
         }
         input:hover {
-            background-color: rgba(112, 0, 0, 0.749);
+            background-color: rgba(170, 0, 0, 0.749);
         }
     }
 }
@@ -251,6 +322,7 @@ select {
 #lista {
     width: 95%;
     background-color: #0E0D26;
+    height: 500px;
 }
 
 #tabela {
@@ -260,9 +332,11 @@ select {
 }
 
 table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
     margin: 1%;
+    overflow-x: auto;
+    overflow-y: auto;
 
     th, td {
         text-align: left;
@@ -281,7 +355,7 @@ table {
     td {
         color: rgb(212, 235, 255);
         background-color: #1D1F26;
-        text-wrap: nowrap;  
+ 
         border-bottom: 1px solid #6258A6;
     }
 
@@ -289,6 +363,8 @@ table {
         padding: 0;
         margin: 0;
     }
+
+    tbody tr:nth-child(even) {background-color: #f2f2f2;}
 }
 
 footer {
@@ -304,6 +380,7 @@ footer {
 #termo {
     width: 80%;
     text-align: center;
+    text-wrap: nowrap;
 }
 
  #termo a {
@@ -326,9 +403,62 @@ footer p {
 }
 
 .logo {
-    width: 10%;
+    display: flex;
+    width: 20%;
+    justify-content: right;
+    img {
+        width: 40%;
+    }
 }
 
-footer img {
-    width: 50%;
+.centro {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1040px){
+    #perfil {
+        width: fit-content;
+    }
+    #usuario {
+        display: none;
+    }
+    div.img {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    table tr#topo th {
+        text-wrap: wrap;
+        overflow-x: auto;
+    }
+    #termo-logo {
+        display: flex;
+        flex-direction: column;
+        #termo {
+            width: 100%;
+        }
+        .logo {
+            justify-content: center;
+            width: 100%;
+            img {
+                width: 10%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px){
+    nav {
+        justify-content: center;
+        display: flex;
+        ul {
+            display: block;
+            text-align: center;
+            width: fit-content;
+        }
+    }
 }

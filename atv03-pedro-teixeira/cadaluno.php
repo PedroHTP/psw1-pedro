@@ -17,9 +17,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">INÍCIO</a></li>
-                <li id="ativo"><a href="cadastro.php">CADASTRO</a></li>
-                <li><a href="listaaluno.php">LISTA DE ALUNOS</a></li>
+                <li><a href="./index.php">INÍCIO</a></li>
+                <li id="ativo"><a href="./cadaluno.php">CADASTRO</a></li>
+                <li><a href="./listaaluno.php">LISTA DE ALUNOS</a></li>
             </ul>
         </nav>
         <div id="search">
@@ -27,16 +27,16 @@
         </div>
         <div id="perfil">
             <div id="usuario">
-                <p>NOME ALUNO</p>
+                
             </div>
             <div id="foto">
                 <img src="./img/perfil-pp.png" alt="">
             </div>
         </div>
     </header>
-    <main>
+    <main class="centro">
         <section id="form">
-            <h2>CRIE SEU PERFIL</h2>
+            <h1>CRIE SEU PERFIL</h1>
                 <div id="formulario-reajuste">
                     <div id="form-esquerdo">
                         <form action="./listaaluno.php" method="post">
@@ -45,52 +45,47 @@
                             <label for="endereco">Endereço:</label>
                             <input type="text" name="endereco" id="idendereco" placeholder="Ex: Rua São Pedro, casa 100" required>
                             <label for="bairro">Bairro:</label>
-                            <input type="text" name="bairro" id="idbairro" placeholder="Ex: Bairro BNH" required>
+                            <input type="text" name="bairro" id="idbairro" placeholder="Ex: Bairro Monte Azul" required>
                             <label for="cidade">Cidade:</label>
                             <input type="text" name="cidade" id="idcidade" placeholder="Ex: Guanambi" required>
                             <label for="uf">Unidade federativa:</label>
                             <select name="uf" id="iduf" required>
-                                <option value="ac">AC</option>
-                                <option value="al">AL</option>
-                                <option value="ap">AP</option>
-                                <option value="am">AM</option>
-                                <option value="ba">BA</option>
-                                <option value="ce">CE</option>
-                                <option value="df">DF</option>
-                                <option value="es">ES</option>
-                                <option value="go">GO</option>
-                                <option value="ma">MA</option>
-                                <option value="mt">MT</option>
-                                <option value="ms">MS</option>
-                                <option value="mg">MG</option>
-                                <option value="pa">PA</option>
-                                <option value="pb">PB</option>
-                                <option value="pr">PR</option>
-                                <option value="pe">PE</option>
-                                <option value="pi">PI</option>
-                                <option value="rj">RJ</option>
-                                <option value="rn">RN</option>
-                                <option value="rs">RS</option>
-                                <option value="ro">RO</option>
-                                <option value="rr">RR</option>
-                                <option value="sc">SC</option>
-                                <option value="sp">SP</option>
-                                <option value="se">SE</option>
-                                <option value="to">TO</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ED">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
                             </select>
                             <label for="cpf">Insira seu CPF: </label>
                             <input type="text" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="XXX.XXX.XXX-XX" title="Digite um CPF no formato: XXX.XXX.XXX-XX"  required>
                             <label for="telefone">Digite seu telefone: </label>
-                            <input type="tel" name="telefone" id="idtelefone" placeholder="Ex: (77) 99903-4680"  required>
+                            <input type="tel" name="telefone" id="idtelefone" pattern="(\([0-9]{2}\))\s([0-9]{5})-([0-9]{4})" placeholder="Ex: (77) 99903-4680" title="Digite o telefone no formato: (**) *****-****" required>
                             <label for="nascimento">Data de nascimento: </label>
-                            <input type="date" name="nascimento" id="idnascimento"
-                                max="<?=date('Y')?>-<?=date('m')?>-<?=date('d')?>"
-                                title="Selecione uma data que seja antes de <?=date('d')?>/<?=date('m')?>/<?=date('Y')?>"
-                                value="<?=date('Y')?>-<?=date('m')?>-<?=date('d')?>"  required>
-                        </form>
+                            <input type="date" name="nascimento" id="idnascimento" title="Selecione uma data que seja antes de <?=date('d')?>/<?=date('m')?>/<?=date('Y')?>" value="<?=date('Y')?>-<?=date('m')?>-<?=date('d')?>" required>
                     </div>
                     <div id="form-direito">
-                        <form action="./listaaluno.php" method="post">
                             <h3>DISCIPLINAS CURSADAS</h3>
                                 <div class="selecao">
                                     <div class="opcao">
@@ -153,11 +148,9 @@
                                         <label for="favorita">História</label>
                                     </div>
                                 </div>
-                        </form>
                     </div>
                 </div>
             <div id="botoes">
-                <form action="./listaaluno.php" method="post">
                     <div id="botao-esquerda">
                         <input type="submit" value="Concluir">
                     </div>
