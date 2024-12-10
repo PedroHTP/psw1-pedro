@@ -55,7 +55,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="centro">
         <section id="lista">
             <h1>LISTA DE ALUNOS CADASTRADOS</h1>
             <div id="tabela">

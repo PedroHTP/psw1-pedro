@@ -81,17 +81,13 @@
                             <label for="cpf">Insira seu CPF: </label>
                             <input type="text" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="XXX.XXX.XXX-XX" title="Digite um CPF no formato: XXX.XXX.XXX-XX"  required>
                             <label for="telefone">Digite seu telefone: </label>
-                            <input type="tel" name="telefone" id="idtelefone" pattern="(\([0-9]{2}\))\s([0-9]{5})-([0-9]{4})" placeholder="Ex: (77) 99903-4680" title="Digite o telefone no formato: (**) *****-****" required>
+                            <input type="tel" name="telefone" id="idtelefone" pattern="(\([0-9]{2}\))\s([0-9]{5})-([0-9]{4})" placeholder="Ex: (77) 99903-4680" title="Digite o telefone no formato: (**) *****-****"  required>
                             <label for="nascimento">Data de nascimento: </label>
                             <input type="date" name="nascimento" id="idnascimento" title="Selecione uma data que seja antes de <?=date('d')?>/<?=date('m')?>/<?=date('Y')?>" value="<?=date('Y')?>-<?=date('m')?>-<?=date('d')?>" required>
                     </div>
                     <div id="form-direito">
                             <h3>DISCIPLINAS CURSADAS</h3>
                                 <div class="selecao">
-                                    <div class="opcao">
-                                        <input type="checkbox" name="matematica" id="idmatematica">
-                                        <label for="matematica">Matemática</label>
-                                    </div>
                                     <div class="opcao">
                                         <input type="checkbox" name="portugues" id="idportugues">
                                         <label for="portugues">Português</label>
@@ -150,7 +146,7 @@
                                 </div>
                     </div>
                 </div>
-            <div id="botoes">
+            <div id="botoes"> 
                     <div id="botao-esquerda">
                         <input type="submit" value="Concluir">
                     </div>
