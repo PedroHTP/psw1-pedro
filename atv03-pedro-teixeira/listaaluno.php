@@ -14,6 +14,7 @@
     $array_nome =  explode($espaco, $nome_completo);
     $usuario = $array_nome[0] . " " . $array_nome[1];
     $nascimento = $_POST['nascimento'];
+    
     $traco = '-';
     $dataarray = explode ($traco, $nascimento);
     $ano = $dataarray [0];
